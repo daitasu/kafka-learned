@@ -16,11 +16,23 @@ const runConsumer = async () => {
 
   await consumer.run({
     eachMessage: async ({ topic, partition, message }) => {
-      console.log({
-        partition,
-        offset: message.offset,
-        value: message.value.toString(),
-      });
+      try {
+        // メッセージの処理
+        console.log({
+          partition,
+          offset: message.offset,
+          value: message.value.toString(),
+        });
+
+        // メッセージ処理が成功した場合にのみ offset をcommit
+        await consumer.commitOffsets([
+          { topic, partition, offset: (Number(message.offset) + 1).toString() },
+        ]);
+        console.log(`Offset committed: ${message.offset}`);
+      } catch (error) {
+        // エラーが発生した場合、offset は commit しない
+        console.error(`Error processing message: ${error}`);
+      }
     },
   });
 };
