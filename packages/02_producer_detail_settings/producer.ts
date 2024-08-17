@@ -5,7 +5,12 @@ const kafka = new Kafka({
   brokers: ["localhost:9092"],
 });
 
-const producer = kafka.producer();
+const producer = kafka.producer({
+  allowAutoTopicCreation: true,
+  transactionTimeout: 30000,
+  maxInFlightRequests: 1,
+  idempotent: true,
+});
 
 const runProducer = async () => {
   await producer.connect();
