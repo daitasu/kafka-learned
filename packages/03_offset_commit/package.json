@@ -1,0 +1,18 @@
+{
+  "name": "01_basic_setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:producer": "tsx producer.ts",
+    "start:consumer": "tsx consumer.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "workspace:*",
+    "tsx": "workspace:*"
+  }
+}
