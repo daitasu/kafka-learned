@@ -20,6 +20,7 @@ const runProducer = async () => {
   await producer.send({
     topic: "test-topic",
     messages: [{ value: "こんにちは！" }, { value: "さようなら！" }],
+    acks: -1,
   });
 
   console.log("Messages sent");
