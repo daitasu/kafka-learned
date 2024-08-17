@@ -15,8 +15,16 @@ const runConsumer = async () => {
   await consumer.subscribe({ topic: "test-topic", fromBeginning: true });
 
   await consumer.run({
+    autoCommit: false,
     eachMessage: async ({ topic, partition, message }) => {
       try {
+        // 特定のメッセージ内容でエラーを発生させる
+        if (message.value.toString() === "エラーになるメッセージ") {
+          if (Math.random() < 0.7) {
+            throw new Error("Intentional error for testing");
+          }
+        }
+
         // メッセージの処理
         console.log({
           partition,
@@ -32,6 +40,10 @@ const runConsumer = async () => {
       } catch (error) {
         // エラーが発生した場合、offset は commit しない
         console.error(`Error processing message: ${error}`);
+
+        // エラーが発生した場合、特定のオフセットで再試行する
+        await consumer.seek({ topic, partition, offset: message.offset });
+        console.log(`Seeking to offset ${message.offset} for retry`);
       }
     },
   });

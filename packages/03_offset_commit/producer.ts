@@ -14,7 +14,11 @@ const runProducer = async () => {
   // メッセージを送信
   await producer.send({
     topic: "test-topic",
-    messages: [{ value: "こんにちは！" }, { value: "さようなら！" }],
+    messages: [
+      { value: "正常なメッセージ1" },
+      { value: "エラーになるメッセージ" },
+      { value: "正常なメッセージ2" },
+    ],
   });
 
   console.log("Messages sent");
