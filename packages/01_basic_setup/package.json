@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "kafkajs": "workspace:*",
-    "tsx": "workspace:*"
+    "kafkajs": "catalog:",
+    "tsx": "catalog:"
   }
 }

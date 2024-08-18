@@ -8,9 +8,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "kafkajs": "^2.2.4",
-    "tsx": "^4.17.0"
-  }
+  "license": "ISC"
 }

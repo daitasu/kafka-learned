@@ -1,5 +1,5 @@
 {
-  "name": "@kafka-learned/02_producer_detail_settings",
+  "name": "@kafka-learned/04_debezium_cdc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "kafkajs": "catalog:",
+    "pg": "^8.12.0",
     "tsx": "catalog:"
   }
 }

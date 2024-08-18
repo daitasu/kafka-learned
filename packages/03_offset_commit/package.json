@@ -1,5 +1,5 @@
 {
-  "name": "01_basic_setup",
+  "name": "@kafka-learned/03_offset_commit",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "kafkajs": "workspace:*",
-    "tsx": "workspace:*"
+    "kafkajs": "catalog:",
+    "tsx": "catalog:"
   }
 }
