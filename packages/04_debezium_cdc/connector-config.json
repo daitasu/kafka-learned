@@ -1,0 +1,16 @@
+{
+  "name": "postgres-users-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "postgres1",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "password",
+    "database.dbname": "originalDB",
+    "database.server.name": "dbserver1",
+    "table.include.list": "public.Users",
+    "plugin.name": "pgoutput",
+    "topic.prefix": "test_topic_prefix"
+  }
+}
