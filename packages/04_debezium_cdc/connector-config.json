@@ -9,8 +9,8 @@
     "database.password": "password",
     "database.dbname": "originalDB",
     "database.server.name": "dbserver1",
-    "table.include.list": "public.Users",
+    "table.include.list": "public.users",
     "plugin.name": "pgoutput",
-    "topic.prefix": "test_topic_prefix"
+    "topic.prefix": "dbserver1"
   }
 }
