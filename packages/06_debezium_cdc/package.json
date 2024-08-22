@@ -1,5 +1,5 @@
 {
-  "name": "@kafka-learned/04_debezium_cdc",
+  "name": "@kafka-learned/04_multi_broker_pattern",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
