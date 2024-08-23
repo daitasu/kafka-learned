@@ -1,5 +1,5 @@
 {
-  "name": "01_basic_setup",
+  "name": "@kafka-learned/04_multi_broker",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

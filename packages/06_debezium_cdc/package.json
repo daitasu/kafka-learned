@@ -1,5 +1,5 @@
 {
-  "name": "@kafka-learned/04_multi_broker_pattern",
+  "name": "@kafka-learned/06_multi_broker_pattern",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
