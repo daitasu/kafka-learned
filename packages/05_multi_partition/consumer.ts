@@ -16,7 +16,7 @@ const runConsumer = async () => {
   // トピックの購読を開始
   await consumer.subscribe({ topic: "orders", fromBeginning: true });
 
-  // Consumer の手動 partition 割り当ては現状負荷
+  // Consumer の手動 partition 割り当ては現状不可
   // refs: https://github.com/tulios/kafkajs/issues/373#issuecomment-1155343133
   await consumer.run({
     eachMessage: async ({ topic, partition, message }) => {
